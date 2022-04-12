@@ -1,0 +1,12 @@
+<h1>Liste des tâches</h1>
+
+<div class="todos">
+
+    <button (click)="onClick()">TEST</button>
+
+    <div class="todo" *ngFor="let todo of todos; index as i">
+        <input [id]="'t-'+i" type="checkbox">
+        <label [for]="'t-'+i">{{ i + 1 }}/{{ todo.message }}</label>
+        {{ todo |json }}
+    </div>
+</div>
